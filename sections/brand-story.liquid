@@ -1,0 +1,100 @@
+<style>
+  #brand-story {
+    padding-top: {{ section.settings.pt }}px;
+    padding-bottom: {{ section.settings.pb }}px;
+  }
+
+  #brand-story .brand-story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  #brand-story .brand-story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  #brand-story .brand-story-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  #brand-story .brand-story-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 749px) {
+    #brand-story .brand-story-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section id="brand-story">
+  <div class="brand-story-container">
+    <div class="brand-story-image">
+      {% if section.settings.image != blank %}
+        <img
+          src="{{ section.settings.image | image_url: width: 800 }}"
+          alt="{{ section.settings.image.alt | escape }}"
+        >
+      {% endif %}
+    </div>
+
+    <div class="brand-story-content">
+      <h2>{{ section.settings.heading }}</h2>
+      <div class="brand-story-description">
+        {{ section.settings.description }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Brand Story",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "min": 0,
+      "max": 100,
+      "default": 20,
+      "label": "Padding Top"
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "min": 0,
+      "max": 100,
+      "default": 20,
+      "label": "Padding Bottom"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Story"
+    }
+  ]
+}
+{% endschema %}

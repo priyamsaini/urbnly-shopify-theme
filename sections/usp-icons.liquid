@@ -1,0 +1,110 @@
+{% stylesheet %}
+  /* USP Icons Grid */
+  #usp-icons .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  /* Each USP card */
+  #usp-icons .usp-wrapper {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    align-items: start;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  /* Icon */
+  #usp-icons .usp-image-wrapper img {
+    display: block;
+    max-width: 64px;
+    height: auto;
+  }
+
+  /* Text */
+  #usp-icons .usp-content-wrapper h4 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  #usp-icons .usp-content-wrapper p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  /* Small screens */
+  @media (max-width: 520px) {
+    #usp-icons .usp-wrapper {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+
+    #usp-icons .usp-image-wrapper img {
+      max-width: 48px;
+    }
+  }
+{% endstylesheet %}
+
+<section id="usp-icons">
+  <div class="container">
+    {% for block in section.blocks %}
+      <div class="usp-wrapper">
+        <div class="usp-image-wrapper">
+          <img
+            src="{{ block.settings.icon | image_url: width:200 }}"
+            alt="{{ block.settings.icon.alt }}"
+            width=""
+            height=""
+          >
+        </div>
+        <div class="usp-content-wrapper">
+          <h4>{{ block.settings.title }}</h4>
+          <p>{{ block.settings['short-text'] }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "USP Icons",
+  "blocks": [
+    {
+      "type": "usp-icon",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "short-text",
+          "label": "Short Text"
+        }
+      ],
+      "limit": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP Icons"
+    }
+  ]
+}
+{% endschema %}
