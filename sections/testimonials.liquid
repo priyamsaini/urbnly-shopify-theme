@@ -1,0 +1,98 @@
+<style>
+  #testimonials {
+    padding: 2rem 1.5rem;
+  }
+
+  #testimonials .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  #testimonials .testimonial {
+    border-left: 4px solid #333;
+    padding-left: 1.5rem;
+  }
+
+  #testimonials .quote {
+    font-size: 1.05rem;
+    font-style: italic;
+    margin: 0 0 1rem 0;
+    color: #333;
+  }
+
+  #testimonials .author {
+    font-weight: 600;
+    margin: 0;
+    color: #666;
+  }
+
+  @media (max-width: 749px) {
+    #testimonials .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section id="testimonials">
+  <div class="testimonials-grid">
+    {% for block in section.blocks %}
+      <div class="testimonial" {{ block.shopify_attributes }}>
+        <p class="quote">{{ block.settings.quote }}</p>
+        <p class="author">{{ block.settings.author }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Quality exceeded expectations. Fits perfectly and feels premium.",
+            "author": "Rahul M."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Minimal design, great fabric. Exactly what I was looking for.",
+            "author": "Aman S."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Fast delivery and excellent build quality. Will order again.",
+            "author": "Neha K."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

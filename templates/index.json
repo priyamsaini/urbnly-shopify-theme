@@ -130,11 +130,133 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "brand_story_9zApHf": {
+      "type": "brand-story",
+      "name": "Brand Story",
+      "settings": {
+        "image": "shopify://shop_images/one-lifestyle-image-street-neutral-avoid-white-studio-backgrounds.png",
+        "heading": "Designed for everyday movement",
+        "description": "<p>URBNLY creates timeless streetwear essentials built for daily wear.<br/>Every piece focuses on fit, fabric, and function—without unnecessary noise.</p>",
+        "pt": 20,
+        "pb": 20
+      }
+    },
+    "rich_text_rrfQm7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JVVFhH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Best Seller",
+            "heading_size": "h1"
+          }
+        },
+        "text_aRcfjP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our most loved essential. Clean silhouette, perfect fit, and premium cotton feel.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JVVFhH",
+        "text_aRcfjP"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_b6C7LA": {
+      "type": "featured-product",
+      "blocks": {
+        "price_wB3NhY": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_RqRKUC": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons_CKcJr3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "price_wB3NhY",
+        "variant_picker_RqRKUC",
+        "buy_buttons_CKcJr3"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "oversized-black-tee",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "testimonials_nF7CTx": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_AkdjaH": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Quality exceeded expectations. Fits perfectly and feels premium.",
+            "author": "Rahul M."
+          }
+        },
+        "testimonial_4L8Wpf": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Minimal design, great fabric. Exactly what I was looking for.",
+            "author": "Aman S."
+          }
+        },
+        "testimonial_dPQHV6": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Fast delivery and excellent build quality. Will order again.",
+            "author": "Neha K."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_AkdjaH",
+        "testimonial_4L8Wpf",
+        "testimonial_dPQHV6"
+      ],
+      "name": "Testimonials",
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
     "usp_icons_Upy7Cj",
-    "featured_collection_cnYcjj"
+    "featured_collection_cnYcjj",
+    "brand_story_9zApHf",
+    "rich_text_rrfQm7",
+    "featured_product_b6C7LA",
+    "testimonials_nF7CTx"
   ]
 }
