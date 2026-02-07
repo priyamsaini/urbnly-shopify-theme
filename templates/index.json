@@ -142,26 +142,26 @@
         "pb": 20
       }
     },
-    "rich_text_rrfQm7": {
+    "rich_text_awPEhe": {
       "type": "rich-text",
       "blocks": {
-        "heading_JVVFhH": {
+        "heading_EUeE4e": {
           "type": "heading",
           "settings": {
             "heading": "Best Seller",
             "heading_size": "h1"
           }
         },
-        "text_aRcfjP": {
+        "text_nARJUU": {
           "type": "text",
           "settings": {
-            "text": "<p>Our most loved essential. Clean silhouette, perfect fit, and premium cotton feel.</p>"
+            "text": "<p>Our most loved essential. Clean silhouette, relaxed fit, and premium heavyweight cotton built for everyday wear.</p>"
           }
         }
       },
       "block_order": [
-        "heading_JVVFhH",
-        "text_aRcfjP"
+        "heading_EUeE4e",
+        "text_nARJUU"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -173,21 +173,21 @@
         "padding_bottom": 0
       }
     },
-    "featured_product_b6C7LA": {
+    "featured_product_4JKdc6": {
       "type": "featured-product",
       "blocks": {
-        "price_wB3NhY": {
+        "price_rtzJY9": {
           "type": "price",
           "settings": {}
         },
-        "variant_picker_RqRKUC": {
+        "variant_picker_kGxnpM": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "picker_type": "dropdown",
+            "swatch_shape": "none"
           }
         },
-        "buy_buttons_CKcJr3": {
+        "buy_buttons_WeHwgD": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
@@ -196,9 +196,9 @@
         }
       },
       "block_order": [
-        "price_wB3NhY",
-        "variant_picker_RqRKUC",
-        "buy_buttons_CKcJr3"
+        "price_rtzJY9",
+        "variant_picker_kGxnpM",
+        "buy_buttons_WeHwgD"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
@@ -216,24 +216,24 @@
         "padding_bottom": 36
       }
     },
-    "testimonials_nF7CTx": {
+    "testimonials_zC9HrA": {
       "type": "testimonials",
       "blocks": {
-        "testimonial_AkdjaH": {
+        "testimonial_8adB8H": {
           "type": "testimonial",
           "settings": {
             "quote": "Quality exceeded expectations. Fits perfectly and feels premium.",
             "author": "Rahul M."
           }
         },
-        "testimonial_4L8Wpf": {
+        "testimonial_nVBM4z": {
           "type": "testimonial",
           "settings": {
             "quote": "Minimal design, great fabric. Exactly what I was looking for.",
             "author": "Aman S."
           }
         },
-        "testimonial_dPQHV6": {
+        "testimonial_4niY9z": {
           "type": "testimonial",
           "settings": {
             "quote": "Fast delivery and excellent build quality. Will order again.",
@@ -242,9 +242,9 @@
         }
       },
       "block_order": [
-        "testimonial_AkdjaH",
-        "testimonial_4L8Wpf",
-        "testimonial_dPQHV6"
+        "testimonial_8adB8H",
+        "testimonial_nVBM4z",
+        "testimonial_4niY9z"
       ],
       "name": "Testimonials",
       "settings": {}
@@ -255,8 +255,8 @@
     "usp_icons_Upy7Cj",
     "featured_collection_cnYcjj",
     "brand_story_9zApHf",
-    "rich_text_rrfQm7",
-    "featured_product_b6C7LA",
-    "testimonials_nF7CTx"
+    "rich_text_awPEhe",
+    "featured_product_4JKdc6",
+    "testimonials_zC9HrA"
   ]
 }
