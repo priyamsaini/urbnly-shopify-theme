@@ -82,6 +82,39 @@
         "padding_bottom": 12
       }
     },
+    "product_accordian_3YRFiy": {
+      "type": "product-accordian",
+      "blocks": {
+        "accordion_block_U7bc8x": {
+          "type": "accordion_block",
+          "settings": {
+            "title": "Description",
+            "content": "{{ product.description }}"
+          }
+        },
+        "accordion_block_w3dCbz": {
+          "type": "accordion_block",
+          "settings": {
+            "title": "Shipping",
+            "content": "<p>Orders are shipped within 2–3 business days.<br/>Free shipping on prepaid orders.</p>"
+          }
+        },
+        "accordion_block_GrGPcj": {
+          "type": "accordion_block",
+          "settings": {
+            "title": "Returns",
+            "content": "<p>Easy 7-day returns for unused products with original packaging.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_block_U7bc8x",
+        "accordion_block_w3dCbz",
+        "accordion_block_GrGPcj"
+      ],
+      "name": "Product Accordion",
+      "settings": {}
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -103,6 +136,7 @@
   },
   "order": [
     "main",
+    "product_accordian_3YRFiy",
     "related-products"
   ]
 }
