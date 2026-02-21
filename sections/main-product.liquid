@@ -1,3 +1,45 @@
+<style>
+  .sticky-atc {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding: 0.75rem 1rem;
+  z-index: 50;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+}
+
+.sticky-atc.hidden {
+  display: none;
+}
+
+.sticky-atc__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-atc__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sticky-atc__price {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .sticky-atc {
+    display: none;
+  }
+}
+
+</style>
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -736,6 +778,47 @@
       {{ product | structured_data }}
     </script>
   </div>
+
+  <div id="sticky-atc" class="sticky-atc hidden">
+  <div class="sticky-atc__content">
+    <div class="sticky-atc__info">
+      <p class="sticky-atc__title">{{ product.title }}</p>
+      <p class="sticky-atc__price">
+        {{ product.selected_or_first_available_variant.price | money }}
+      </p>
+    </div>
+
+    <button
+      class="button button--primary sticky-atc__btn"
+      onclick="document.querySelector('form[action^=\"/cart/add\"]').submit();"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const stickyBar = document.getElementById("sticky-atc");
+    const productForm = document.querySelector("form[action^='/cart/add']");
+
+    if (!stickyBar || !productForm) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          stickyBar.classList.remove("hidden");
+        } else {
+          stickyBar.classList.add("hidden");
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(productForm);
+  });
+</script>
+
+
 </product-info>
 
 {% schema %}
